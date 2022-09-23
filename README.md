@@ -1,1 +1,1 @@
-# at frist install node module: npm i
+# Install node module: npm i
