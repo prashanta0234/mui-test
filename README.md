@@ -1,1 +1,1 @@
-# Install node module: npm i
+# Install node modules: npm i
