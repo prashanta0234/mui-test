@@ -100,44 +100,6 @@ const Nav = () => {
             </Link>
           </Typography>
 
-          {/* <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-              color: "black",
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                fontSize: 20,
-                color: "#1A1A1A",
-                fontWeight: 600,
-                fontFamily: " Source Sans Pro",
-              }}
-            >
-              Good Morning, Shiva!
-            </Typography>
-          </Box> */}
-
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <img alt="" src={logo} />
-          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -147,20 +109,19 @@ const Nav = () => {
           >
             <Typography
               variant="h4"
+              color=" secondary"
               sx={{
                 fontSize: 20,
-                color: "#1A1A1A",
+
                 fontWeight: 600,
               }}
             >
               Good Morning, Shiva!
             </Typography>
           </Box>
-          <Search
-            sx={{ mx: 2, backgroundColor: " #E9E5FA", borderRadius: 100 }}
-          >
+          <Search sx={{ mx: 2, backgroundColor: "#E9E5FA", borderRadius: 100 }}>
             <SearchIconWrapper>
-              <SearchIcon sx={{ color: "#7B61FF" }} />
+              <SearchIcon color="primary" />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"

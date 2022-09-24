@@ -29,8 +29,8 @@ export default function SideBar() {
         {/* reserve button */}
         <Link to="/reserve">
           <ListItem
+            color="primary"
             sx={{
-              color: "#7B61FF",
               width: "100%",
 
               position: "relative",
@@ -55,7 +55,7 @@ export default function SideBar() {
                 sx={{
                   width: "2px",
                   height: "16px",
-                  background: "#7B61FF",
+                  backgroundColor: "primary.main",
                   borderRadius: "1000px",
                   position: "absolute",
                   right: "0px",
@@ -68,8 +68,8 @@ export default function SideBar() {
         {/* About button */}
         <Link to="/about">
           <ListItem
+            color="primary"
             sx={{
-              color: "#7B61FF",
               width: "100%",
 
               position: "relative",
@@ -94,7 +94,7 @@ export default function SideBar() {
                 sx={{
                   width: "2px",
                   height: "16px",
-                  background: "#7B61FF",
+                  backgroundColor: "primary.main",
                   borderRadius: "1000px",
                   position: "absolute",
                   right: "0px",
@@ -105,27 +105,6 @@ export default function SideBar() {
         </Link>
 
         {/* logout */}
-        {/* <Button
-          sx={{
-            color: "black",
-            width: "100%",
-            justifyContent: "flex-start",
-            position: "absolute",
-
-            bottom: "16px",
-            left: "5px",
-            height: "44px",
-            my: "6px",
-          }}
-          sentenceCase
-        >
-          <img alt="" src={logout} height="20px" />
-          <Typography
-            sx={{ fontSize: "12px", textTransform: "none", ml: "8px" }}
-          >
-            Logout
-          </Typography>
-        </Button> */}
 
         <ListItem
           sx={{

@@ -25,6 +25,7 @@ export default function SingleNews() {
           }}
         >
           <Typography
+            color=" secondary"
             variant="h5"
             sx={{
               fontSize: "13px",
@@ -46,7 +47,7 @@ export default function SingleNews() {
           sx={{
             width: "2px",
             height: "19px",
-            background: "#7B61FF",
+            backgroundColor: "primary.main",
             borderRadius: "1000px",
             position: "absolute",
             left: "0px",
