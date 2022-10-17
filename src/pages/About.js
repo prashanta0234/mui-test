@@ -10,11 +10,11 @@ export default function About() {
         <Box sx={{ display: "flex" }}>
           <img alt="" src={arrow} />
           <Typography
+            color={"primary"}
             sx={{
               fontSize: "12px",
               textTransform: "none",
               ml: "8px",
-              color: "#7B61FF",
             }}
           >
             About Us

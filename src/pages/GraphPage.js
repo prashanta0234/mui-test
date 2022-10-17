@@ -12,11 +12,11 @@ export default function GraphPage() {
       <Box sx={{ display: "flex" }}>
         <img alt="" src={arrow} />
         <Typography
+          color="primary"
           sx={{
             fontSize: "12px",
             textTransform: "none",
             ml: "8px",
-            color: "#7B61FF",
           }}
         >
           Reserve
@@ -38,12 +38,13 @@ export default function GraphPage() {
         <Autocomplete
           id="country-select-demo"
           defaultValue="usd"
+          color="primary"
           sx={{
             width: "100px",
 
             ".MuiOutlinedInput-root": {
-              borderColor: "#7B61FF",
-              color: "#7B61FF",
+              borderColor: "primary.main",
+
               borderWidth: 10,
               height: "50px",
             },
@@ -54,7 +55,8 @@ export default function GraphPage() {
           renderOption={(props, option) => (
             <Box
               component="li"
-              sx={{ color: "#7B61FF", height: "36px" }}
+              color="primary"
+              sx={{ height: "36px" }}
               {...props}
             >
               {option}

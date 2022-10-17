@@ -37,8 +37,9 @@ export default function Main() {
           >
             <Box>
               <Typography
+                color=" secondary"
                 variant="h4"
-                sx={{ fontSize: "20px", fontWeight: "600", color: "#1A1A1A" }}
+                sx={{ fontSize: "20px", fontWeight: "600" }}
               >
                 News
               </Typography>
