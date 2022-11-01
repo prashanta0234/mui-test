@@ -24,11 +24,8 @@ import { Link } from "react-router-dom";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Nav = () => {
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const [anchorElUser, setAnchorElUser] = React.useState<any>(null);
+  const [search, setSearch] = React.useState<string>("");
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -74,6 +71,7 @@ const Nav = () => {
       },
     },
   }));
+  console.log(search);
   return (
     <AppBar
       position="static"
@@ -126,6 +124,13 @@ const Nav = () => {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={(
+                e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+              ) => {
+               
+                setSearch(e.currentTarget.value);
+              }}
+              value={search}
             />
           </Search>
           <Box sx={{ mx: "24px" }}>
@@ -133,7 +138,11 @@ const Nav = () => {
           </Box>
           <Box sx={{ flexGrow: 0.1, width: 142 }}>
             <Tooltip title="Open settings" sx={{ display: "flex", width: 142 }}>
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton
+                onClick={(event: React.MouseEvent) =>
+                  setAnchorElUser(event.currentTarget)
+                }
+              >
                 <Avatar
                   alt="Remy Sharp"
                   src=""

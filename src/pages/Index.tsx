@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./About";
 import GraphPage from "./GraphPage";
 
-export default function Index() {
+const Index: React.FC = () => {
   return (
     <>
       <Routes>
@@ -13,4 +13,6 @@ export default function Index() {
       </Routes>
     </>
   );
-}
+};
+
+export default Index;
