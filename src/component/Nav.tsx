@@ -25,7 +25,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Nav = () => {
   const [anchorElUser, setAnchorElUser] = React.useState<any>(null);
-  const [search, setSearch] = React.useState<string>("");
+  const search = React.useRef<HTMLInputElement>(null);
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -55,23 +55,36 @@ const Nav = () => {
     alignItems: "center",
     justifyContent: "center",
   }));
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  const StyledInputBase = styled("input")(({ theme }) => ({
     color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
+
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    borderRadius: "10px",
+    border: "none",
+    backgroundColor: "inherit",
+    "&:focus": {
+      borderRadius: "10px",
+      border: "none",
+      backgroundColor: "inherit",
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
+        borderRadius: "10px",
+        border: "none",
+        backgroundColor: "inherit",
       },
     },
   }));
-  console.log(search);
+
+  const onchageHandle = () => {
+    console.log(search.current!.value);
+  };
   return (
     <AppBar
       position="static"
@@ -121,17 +134,38 @@ const Nav = () => {
             <SearchIconWrapper>
               <SearchIcon color="primary" />
             </SearchIconWrapper>
-            <StyledInputBase
+            <div className="MuiInputBase-root MuiInputBase-colorPrimary css-7mt4h1-MuiInputBase-root">
+              <StyledInputBase
+                className="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+                placeholder="Search…"
+                type="text"
+                onChange={
+                  onchageHandle
+                  //   (
+                  //   e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+                  // ) => {
+
+                  //   search=e.currentTarget.value;
+                  // }
+                }
+                ref={search}
+              />
+            </div>
+            {/* <StyledInputBase
               placeholder="Search…"
+              type="text"
               inputProps={{ "aria-label": "search" }}
-              onChange={(
-                e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
-              ) => {
-               
-                setSearch(e.currentTarget.value);
-              }}
-              value={search}
-            />
+              onChange={
+                onchageHandle
+                //   (
+                //   e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+                // ) => {
+
+                //   search=e.currentTarget.value;
+                // }
+              }
+              ref={search}
+            /> */}
           </Search>
           <Box sx={{ mx: "24px" }}>
             <img alt="" src={notification} height="24px" />
