@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-export default function SingleNews() {
+const SingleNews: React.FC = () => {
   return (
     <>
       <Box
@@ -53,9 +53,9 @@ export default function SingleNews() {
             left: "0px",
             top: `calc(50% - 19px/2 - 0.5px)`,
           }}
-          placement="right"
         />
       </Box>
     </>
   );
-}
+};
+export default SingleNews;

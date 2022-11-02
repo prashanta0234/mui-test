@@ -1,8 +1,8 @@
 import React from "react";
 import SingleNews from "./SingleNews";
 
-export default function News() {
-  const newsArray = [1, 2, 3, 4, 5];
+const News: React.FC = () => {
+  const newsArray: number[] = [1, 2, 3, 4, 5];
   return (
     <>
       {newsArray.map((news) => (
@@ -10,4 +10,5 @@ export default function News() {
       ))}
     </>
   );
-}
+};
+export default News;

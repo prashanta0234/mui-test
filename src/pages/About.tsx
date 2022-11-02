@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import arrow from "../images/rightArrow.svg";
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <>
       <Box>
@@ -26,4 +26,5 @@ export default function About() {
       </Box>
     </>
   );
-}
+};
+export default About;
