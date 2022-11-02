@@ -6,7 +6,7 @@ import arrow from "../images/rightArrow.svg";
 import "./graph.css";
 
 export default function GraphPage() {
-  const Currency = ["usd", "rs", "tk", "ue"];
+  const Currency: string = ["usd", "rs", "tk", "ue"];
   return (
     <>
       <Box sx={{ display: "flex" }}>

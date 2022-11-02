@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import {
-  Button,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -17,9 +15,9 @@ import "./style/Sidebar.css";
 import logout from "../images/logout.svg";
 import { Link } from "react-router-dom";
 
-export default function SideBar() {
-  const [state, setState] = useState("dashbord");
-  const handleOnlick = (name) => {
+const SideBar: React.FC = () => {
+  const [state, setState] = useState<string>("dashbord");
+  const handleOnlick: Function = (name: string) => {
     setState(name);
   };
 
@@ -37,16 +35,17 @@ export default function SideBar() {
               height: "44px",
             }}
           >
+            {/* className={state === "dashbord" && "active"}
+              sentenceCase */}
             <ListItemButton
               onClick={() => handleOnlick("dashbord")}
               className={state === "dashbord" && "active"}
-              sentenceCase
             >
               <ListItemIcon style={{ minWidth: "30px" }}>
                 <img alt="" src={dashbord} />
               </ListItemIcon>
               <ListItemText
-                primary=" Reserve"
+                primary="RESERVE"
                 primaryTypographyProps={{ fontSize: 12, fontWeight: "medium" }}
               />
 
@@ -60,7 +59,6 @@ export default function SideBar() {
                   position: "absolute",
                   right: "0px",
                 }}
-                placement="right"
               />
             </ListItemButton>
           </ListItem>
@@ -79,13 +77,12 @@ export default function SideBar() {
             <ListItemButton
               onClick={() => handleOnlick("about")}
               className={state === "about" && "active"}
-              sentenceCase
             >
               <ListItemIcon style={{ minWidth: "30px" }}>
                 <img alt="" src={aboutI} />
               </ListItemIcon>
               <ListItemText
-                primary="About Us"
+                primary="ABOUT US"
                 primaryTypographyProps={{ fontSize: 12, fontWeight: "medium" }}
               />
 
@@ -119,7 +116,7 @@ export default function SideBar() {
             my: "6px",
           }}
         >
-          <ListItemButton sentenceCase>
+          <ListItemButton>
             <ListItemIcon style={{ minWidth: "30px" }}>
               <img alt="" src={logout} height="20px" />
             </ListItemIcon>
@@ -132,4 +129,5 @@ export default function SideBar() {
       </List>
     </>
   );
-}
+};
+export default SideBar;
