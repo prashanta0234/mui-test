@@ -9,7 +9,7 @@ import SideBar from "../component/SideBar";
 import Index from "./Index";
 // import Nav from "../component/Nav";
 
-export default function Main() {
+const Main: React.FC = () => {
   return (
     <>
       <Nav />
@@ -52,4 +52,6 @@ export default function Main() {
       </Box>
     </>
   );
-}
+};
+
+export default Main;

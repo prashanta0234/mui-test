@@ -3,8 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 import Main from "./pages/Main";
-
-function App() {
+const App: React.FC = () => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -24,6 +23,6 @@ function App() {
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default App;
