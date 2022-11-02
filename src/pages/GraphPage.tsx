@@ -5,8 +5,8 @@ import { Graph } from "../component/Graph";
 import arrow from "../images/rightArrow.svg";
 import "./graph.css";
 
-export default function GraphPage() {
-  const Currency: string = ["usd", "rs", "tk", "ue"];
+const GraphPage: React.FC = () => {
+  const Currency: string[] = ["usd", "rs", "tk", "ue"];
   return (
     <>
       <Box sx={{ display: "flex" }}>
@@ -79,4 +79,6 @@ export default function GraphPage() {
       </Box>
     </>
   );
-}
+};
+
+export default GraphPage;

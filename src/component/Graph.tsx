@@ -27,7 +27,7 @@ export const options = {
   responsive: true,
 };
 
-const labels = [
+const labels: string[] = [
   "Jan",
   "Feb",
   "Mar",
@@ -41,7 +41,9 @@ const labels = [
   "Nov",
   "Dec",
 ];
-const values = [100, 200, 300, 150, 50, 30, 500, 300, 250, 150, 430, 460];
+const values: number[] = [
+  100, 200, 300, 150, 50, 30, 500, 300, 250, 150, 430, 460,
+];
 
 export const data = {
   labels,
@@ -57,6 +59,6 @@ export const data = {
   ],
 };
 
-export function Graph() {
+export const Graph: React.FC = () => {
   return <Line data={data} />;
-}
+};
