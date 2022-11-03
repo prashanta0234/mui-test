@@ -4,6 +4,7 @@ import React from "react";
 import arrow from "../images/rightArrow.svg";
 
 const About: React.FC = () => {
+  console.log("HI ");
   return (
     <>
       <Box>
